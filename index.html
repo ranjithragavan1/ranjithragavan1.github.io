@@ -6,15 +6,16 @@
     <title>Ranjithragavan</title>
     <meta name="description" content="Ranjithragavan | Mainframe to Agentic AI Engineer">
     <style>
+        /* Minimal Reset */
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
             --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            --accent: #2563eb;    
-            --text-main: #1e293b; 
-            --text-muted: #64748b; 
-            --bg: #f8fafc;       
-            --border: #e2e8f0;  
+            --accent: #2563eb;    /* Google Blue */
+            --text-main: #1e293b; /* Dark Slate */
+            --text-muted: #64748b; /* Grey for dates/meta */
+            --bg: #f8fafc;        /* Very light grey bg */
+            --border: #e2e8f0;    /* Subtle borders */
         }
 
         body {
@@ -27,22 +28,29 @@
             padding: 4rem 2rem;
         }
 
+        /* Typography */
         h1 { font-size: 2.5rem; letter-spacing: -0.05em; margin-bottom: 0.5rem; line-height: 1.1; }
         h2 { font-size: 1.25rem; margin-top: 3rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
         p { margin-bottom: 1rem; }
 
+        /* Header Components */
         .intro { margin-bottom: 3rem; }
         .subtitle { font-size: 1.2rem; color: var(--text-muted); font-weight: 500; }
         .meta-links { font-family: monospace; font-size: 0.9rem; margin-top: 1rem; color: var(--text-muted); }
         .meta-links a { margin-right: 15px; }
 
+        /* Timeline Components */
         .timeline-entry { display: flex; gap: 2rem; margin-bottom: 2rem; }
         .time-marker { min-width: 100px; text-align: right; color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 0.9rem; padding-top: 4px; }
         .entry-content { border-left: 2px solid var(--border); padding-left: 1.5rem; flex: 1; }
         .entry-title { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+        
+        /* Publication Specific Style */
+        .publication-link { font-size: 0.85rem; font-family: monospace; word-break: break-all; }
 
+        /* Project Grid */
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
         .project-card { background: #fff; border: 1px solid var(--border); padding: 1.5rem; border-radius: 6px; transition: border-color 0.2s; display: block; color: inherit; }
         .project-card:hover { border-color: var(--accent); text-decoration: none; }
@@ -62,9 +70,12 @@
             Currently building autonomous agents with LangGraph and exploring LLM reasoning patterns.
         </p>
         <div class="meta-links">
-            <a href="mailto:your-email@example.com">Email</a>
+            <a href="mailto:m.ranjithragavan@gmail.com">Email</a>
+            
+            <a href="mailto:m.ranjithragavan@gmail.com?subject=Interview%20Chat%20Request&body=Hi%20Ranjith%2C%0D%0A%0D%0AI%20would%20like%20to%20discuss%20an%20opportunity.%0D%0A%0D%0AAre%20you%20available%20for%20a%20Google%20Meet%20or%20Teams%20chat%3F%0D%0A">Request Chat</a>
+            
             <a href="https://github.com/ranjithragavan1">GitHub</a>
-            <a href="#">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ranjithragavan">LinkedIn</a>
         </div>
     </header>
 
@@ -75,23 +86,42 @@
             <article class="timeline-entry">
                 <time class="time-marker">2025 – Now</time>
                 <div class="entry-content">
-                    <span class="entry-title">Independent AI Engineer</span>
+                    <span class="entry-title">Agentic AI Engineer</span>
                     <p>Focusing on Model Context Protocol (MCP) and agentic workflows. Re-engineering enterprise logic using Large Language Models.</p>
                 </div>
             </article>
 
             <article class="timeline-entry">
-                <time class="time-marker">2020 – 2024</time>
+                <time class="time-marker">2023 – 2025</time>
                 <div class="entry-content">
-                    <span class="entry-title">Mainframe Engineer</span>
+                    <span class="entry-title">Agentic AI Engineer</span>
+                    <p>Designed and implemented early agentic patterns. Re-engineering enterprise logic using Large Language Models and validating reasoning chains.</p>
+                </div>
+            </article>
+
+            <article class="timeline-entry">
+                <time class="time-marker">2019 – 2023</time>
+                <div class="entry-content">
+                    <span class="entry-title">Mainframe Developer</span>
                     <p>High-volume transaction processing (COBOL/JCL). Specialized in system reliability and legacy data optimization.</p>
                 </div>
             </article>
 
-             <article class="timeline-entry">
+            <article class="timeline-entry">
                 <time class="time-marker">Education</time>
                 <div class="entry-content">
-                    <span class="entry-title">B.Tech, Computer Science</span>
+                    <span class="entry-title">B.Tech, Biotechnology</span>
+                </div>
+            </article>
+
+            <article class="timeline-entry">
+                <time class="time-marker">Publication</time>
+                <div class="entry-content">
+                    <span class="entry-title">Neural Networks in Biotechnology</span>
+                    <p style="margin-bottom: 0.5rem;">
+                        "Increasing productivity of Spirulina platensis in photobioreactors using artificial neural network modeling"
+                    </p>
+                    <a href="https://doi.org/10.1002/bit.27128" target="_blank" class="publication-link">View Paper (DOI) &rarr;</a>
                 </div>
             </article>
         </section>
