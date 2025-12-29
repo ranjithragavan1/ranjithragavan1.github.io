@@ -3,301 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranjithragavan | AI & Agentic Systems Engineer</title>
-    <meta name="description" content="Portfolio of Ranjithragavan. Enterprise Engineer transitioning to Agentic AI, LangGraph, and Deep Learning.">
+    <title>Ranjithragavan</title>
+    <meta name="description" content="Ranjithragavan | Mainframe to Agentic AI Engineer">
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         :root {
-            --primary: #2563eb; /* Google Blue-ish */
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --text: #334155;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --accent: #2563eb;    
+            --text-main: #1e293b; 
+            --text-muted: #64748b; 
+            --bg: #f8fafc;       
+            --border: #e2e8f0;  
         }
+
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: var(--font-stack);
             line-height: 1.6;
-            color: var(--text);
-            margin: 0;
-            background: var(--light);
-        }
-        .container {
-            max-width: 900px;
+            color: var(--text-main);
+            background: var(--bg);
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        /* Hero Section */
-        header {
-            text-align: center;
-            padding: 4rem 0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--primary);
-            font-weight: 500;
-        }
-        
-        /* Sections */
-        section {
-            padding: 3rem 0;
-        }
-        h2 {
-            color: var(--dark);
-            border-left: 4px solid var(--primary);
-            padding-left: 15px;
-            margin-bottom: 2rem;
-            font-size: 1.8rem;
+            padding: 4rem 2rem;
         }
 
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        .skill-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border: 1px solid #e2e8f0;
-        }
-        .skill-title {
-            font-weight: bold;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            display: block;
-            font-size: 1.1rem;
-        }
+        h1 { font-size: 2.5rem; letter-spacing: -0.05em; margin-bottom: 0.5rem; line-height: 1.1; }
+        h2 { font-size: 1.25rem; margin-top: 3rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        p { margin-bottom: 1rem; }
 
-        /* Advanced Project Grid */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-        .project-card {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            padding: 1.5rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            border-color: var(--primary);
-        }
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
-        .folder-icon {
-            font-size: 1.5rem;
-        }
-        .project-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin: 0.5rem 0;
-        }
-        .project-desc {
-            color: #64748b;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: auto;
-        }
-        .tag {
-            background: #eff6ff;
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 99px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        .project-links {
-            margin-top: 1.5rem;
-            display: flex;
-            gap: 1rem;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 1rem;
-        }
-        .link-btn {
-            text-decoration: none;
-            color: var(--dark);
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .link-btn:hover { color: var(--primary); }
+        .intro { margin-bottom: 3rem; }
+        .subtitle { font-size: 1.2rem; color: var(--text-muted); font-weight: 500; }
+        .meta-links { font-family: monospace; font-size: 0.9rem; margin-top: 1rem; color: var(--text-muted); }
+        .meta-links a { margin-right: 15px; }
 
-        /* Contact Button */
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            margin-top: 2rem;
-            transition: background 0.2s;
-        }
-        .btn:hover { background-color: #1d4ed8; }
-        
-        footer {
-            text-align: center;
-            padding: 4rem 0 2rem 0;
-            font-size: 0.9rem;
-            color: #64748b;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 2rem;
-        }
+        .timeline-entry { display: flex; gap: 2rem; margin-bottom: 2rem; }
+        .time-marker { min-width: 100px; text-align: right; color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 0.9rem; padding-top: 4px; }
+        .entry-content { border-left: 2px solid var(--border); padding-left: 1.5rem; flex: 1; }
+        .entry-title { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .project-card { background: #fff; border: 1px solid var(--border); padding: 1.5rem; border-radius: 6px; transition: border-color 0.2s; display: block; color: inherit; }
+        .project-card:hover { border-color: var(--accent); text-decoration: none; }
+        .project-name { font-weight: 600; display: block; margin-bottom: 0.5rem; color: var(--text-main); }
+        .tech-stack { font-size: 0.8rem; color: var(--text-muted); font-family: monospace; margin-top: 1rem; display: block; }
+
+        footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted); }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <img src="profile.jpg" alt="Ranjithragavan" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+    <header class="intro">
+        <h1>Ranjithragavan</h1>
+        <div class="subtitle">AI Engineer & Builder</div>
+        <p style="margin-top: 1.5rem; max-width: 600px;">
+            Bridging the gap between <strong>Enterprise Mainframe Systems</strong> and <strong>Agentic AI</strong>. 
+            Currently building autonomous agents with LangGraph and exploring LLM reasoning patterns.
+        </p>
+        <div class="meta-links">
+            <a href="mailto:your-email@example.com">Email</a>
+            <a href="https://github.com/ranjithragavan1">GitHub</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Experience</h2>
             
-            <h1>Ranjithragavan</h1>
-            <div class="subtitle">Building the next generation of Agentic AI</div>
-            <p style="max-width: 600px; margin: 1.5rem auto; font-size: 1.1rem;">
-                Experienced Enterprise Engineer transitioning to AI Development. 
-                Focusing on <strong>Agentic Workflows</strong>, <strong>LangGraph</strong>, and <strong>Large Language Models (LLMs)</strong>.
-            </p>
-            <a href="mailto:your-email@example.com" class="btn">Contact Me</a>
-        </header>
+            <article class="timeline-entry">
+                <time class="time-marker">2025 – Now</time>
+                <div class="entry-content">
+                    <span class="entry-title">Independent AI Engineer</span>
+                    <p>Focusing on Model Context Protocol (MCP) and agentic workflows. Re-engineering enterprise logic using Large Language Models.</p>
+                </div>
+            </article>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p style="font-size: 1.1rem;">
-                I bridge the gap between robust enterprise systems and cutting-edge AI. 
-                With a strong foundation in backend logic and data structures (Mainframe), I am now dedicating my career to building autonomous AI agents that solve real-world problems.
-            </p>
-            <p style="font-size: 1.1rem; margin-top: 1rem;">
-                
-            </p>
+            <article class="timeline-entry">
+                <time class="time-marker">2020 – 2024</time>
+                <div class="entry-content">
+                    <span class="entry-title">Mainframe Engineer</span>
+                    <p>High-volume transaction processing (COBOL/JCL). Specialized in system reliability and legacy data optimization.</p>
+                </div>
+            </article>
+
+             <article class="timeline-entry">
+                <time class="time-marker">Education</time>
+                <div class="entry-content">
+                    <span class="entry-title">B.Tech, Computer Science</span>
+                </div>
+            </article>
         </section>
 
-        <section id="skills">
-            <h2>Technical Stack</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <span class="skill-title">🤖 Agentic AI</span>
-                    Google ADK, LangGraph, CrewAI, MCP (Model Context Protocol).
-                </div>
-                <div class="skill-card">
-                    <span class="skill-title">🧠 Deep Learning</span>
-                    Neural Networks, Transformers, PyTorch/TensorFlow (Learning Phase).
-                </div>
-                <div class="skill-card">
-                    <span class="skill-title">💻 Core Engineering</span>
-                    Data Structures & Algorithms, System Design, Enterprise Logic.
-                </div>
-                <div class="skill-card">
-                    <span class="skill-title">🛠️ Tools</span>
-                    Git, Docker, Cloudflare, Python, Streamlit.
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Featured Projects</h2>
+        <section>
+            <h2>Experiments</h2>
             <div class="project-grid">
-                
-                <div class="project-card">
-                    <div>
-                        <div class="project-header">
-                            <span class="folder-icon">🤖</span>
-                        </div>
-                        <h3 class="project-title">Agentic Workflow Orchestrator</h3>
-                        <p class="project-desc">
-                            An autonomous agent system built with <strong>LangGraph</strong> that can decompose complex user queries into sub-tasks, execute tools, and synthesize answers.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">LangGraph</span>
-                            <span class="tag">OpenAI API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn">📂 View Code (Coming Soon)</a>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="project-card">
+                    <span class="project-name">Agentic Orchestrator</span>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Autonomous task decomposition using LangGraph. Handles complex query routing.</p>
+                    <span class="tech-stack">Python // LangGraph // OpenAI</span>
+                </a>
 
-                <div class="project-card">
-                    <div>
-                        <div class="project-header">
-                            <span class="folder-icon">📚</span>
-                        </div>
-                        <h3 class="project-title">Financial Docs RAG Chatbot</h3>
-                        <p class="project-desc">
-                            A Retrieval Augmented Generation (RAG) system designed to analyze PDF financial reports. Uses vector embeddings to provide accurate, citation-backed answers.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tag">LangChain</span>
-                            <span class="tag">Pinecone</span>
-                            <span class="tag">Streamlit</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn">📂 View Code (Coming Soon)</a>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="project-card">
+                    <span class="project-name">Financial RAG</span>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Vector-based retrieval system for analyzing financial PDF reports.</p>
+                    <span class="tech-stack">LangChain // Pinecone</span>
+                </a>
 
-                <div class="project-card">
-                    <div>
-                        <div class="project-header">
-                            <span class="folder-icon">🧠</span>
-                        </div>
-                        <h3 class="project-title">Neural Net from Scratch</h3>
-                        <p class="project-desc">
-                            Building a basic neural network without frameworks (just NumPy) to understand backpropagation and gradient descent at a mathematical level.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">NumPy</span>
-                            <span class="tag">Math</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn">📂 View Code (Coming Soon)</a>
-                        </div>
-                    </div>
-                </div>
-
+                <a href="#" class="project-card">
+                    <span class="project-name">Micrograd (NumPy)</span>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Manual implementation of backpropagation to understand gradient descent.</p>
+                    <span class="tech-stack">NumPy // Math</span>
+                </a>
             </div>
         </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2025 Ranjithragavan. Hosted on GitHub & Cloudflare.</p>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2025 Ranjithragavan</p>
+    </footer>
 
 </body>
 </html>
