@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranjithragavan</title>
-    <meta name="description" content="Ranjithragavan | Enterprise Systems & AI Engineer">
+    <title>Ranjithragavan | AI Engineer</title>
+    <meta name="description" content="Ranjithragavan | Enterprise Systems & Agentic AI Engineer">
     <style>
-        /* Minimal Reset */
+        /* --- 1. MODERN RESET & VARIABLES --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            --accent: #2563eb;    
-            --text-main: #1e293b; 
-            --text-muted: #64748b; 
-            --bg: #f8fafc;        
-            --border: #e2e8f0;    
+            /* Google/Microsoft "Tech Blue" Palette */
+            --accent: #1a73e8;         /* The specific blue Google uses */
+            --accent-hover: #1557b0;   /* Darker blue for hover states */
+            --text-main: #202124;      /* Google's 'Black' (Soft Charcoal) */
+            --text-muted: #5f6368;     /* Google's 'Grey' for secondary text */
+            --bg: #ffffff;             /* Pure white background for cleanliness */
+            --bg-subtle: #f8f9fa;      /* Very light grey for hover effects */
+            --border: #dadce0;         /* Subtle border color */
+            
+            /* Font Stack: Priorities 'Inter' or system fonts */
+            --font-stack: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         }
 
         body {
@@ -23,44 +28,132 @@
             line-height: 1.6;
             color: var(--text-main);
             background: var(--bg);
-            max-width: 800px;
+            max-width: 750px;          /* Slightly narrower for better reading experience */
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;        /* More breathing room on top */
         }
 
-        h1 { font-size: 2.5rem; letter-spacing: -0.05em; margin-bottom: 0.5rem; line-height: 1.1; }
-        h2 { font-size: 1.25rem; margin-top: 3rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        p { margin-bottom: 1rem; }
-
-        .intro { margin-bottom: 3rem; }
-        .subtitle { font-size: 1.2rem; color: var(--text-muted); font-weight: 500; }
-        .meta-links { font-family: monospace; font-size: 0.9rem; margin-top: 1rem; color: var(--text-muted); }
-        .meta-links a { margin-right: 15px; }
-
-        .timeline-entry { display: flex; gap: 2rem; margin-bottom: 2rem; }
-        .time-marker { min-width: 100px; text-align: right; color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 0.9rem; padding-top: 4px; }
-        .entry-content { border-left: 2px solid var(--border); padding-left: 1.5rem; flex: 1; }
-        .entry-title { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+        /* --- 2. TYPOGRAPHY --- */
+        h1 { 
+            font-size: 2.75rem; 
+            letter-spacing: -0.05em; 
+            margin-bottom: 0.5rem; 
+            line-height: 1.1; 
+            font-weight: 700;
+        }
         
-        .publication-link { font-size: 0.85rem; font-family: monospace; word-break: break-all; }
+        h2 { 
+            font-size: 1.1rem; 
+            text-transform: uppercase; /* Senior styling */
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-top: 4rem; 
+            margin-bottom: 2rem; 
+            border-bottom: 1px solid var(--border); 
+            padding-bottom: 0.75rem; 
+        }
 
-        footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted); }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        a:hover { color: var(--accent-hover); text-decoration: underline; }
+        p { margin-bottom: 1rem; color: #3c4043; }
+
+        /* --- 3. HEADER SECTION --- */
+        .intro { margin-bottom: 4rem; }
+        .subtitle { 
+            font-size: 1.3rem; 
+            color: var(--text-muted); 
+            font-weight: 400; 
+            margin-bottom: 1.5rem;
+        }
+        
+        .meta-links { 
+            display: flex; 
+            gap: 1.5rem;
+            font-size: 0.95rem; 
+            margin-top: 1.5rem; 
+        }
+        /* Buttons/Links Styling */
+        .meta-links a {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* --- 4. TIMELINE SECTION --- */
+        .timeline-entry { 
+            display: grid; 
+            grid-template-columns: 120px 1fr; /* Fixed width for date, rest for content */
+            gap: 2rem; 
+            margin-bottom: 3rem; 
+        }
+
+        /* Mobile Responsive adjustment */
+        @media (max-width: 600px) {
+            .timeline-entry { grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 2.5rem; }
+            .time-marker { text-align: left; margin-bottom: 0.25rem; }
+            .entry-content { border-left: 2px solid var(--border); padding-left: 1rem; margin-left: 0.25rem; }
+            h1 { font-size: 2.25rem; }
+        }
+
+        .time-marker { 
+            text-align: right; 
+            color: var(--text-muted); 
+            font-variant-numeric: tabular-nums; 
+            font-size: 0.9rem; 
+            font-weight: 500;
+            padding-top: 2px;
+        }
+        
+        .entry-title { 
+            display: block; 
+            font-size: 1.1rem;
+            font-weight: 700; 
+            color: var(--text-main);
+            margin-bottom: 0.5rem; 
+        }
+
+        .entry-content p {
+            font-size: 1rem;
+            color: #4b4f56; /* Slightly softer than pure black */
+            margin-bottom: 0.5rem;
+        }
+
+        /* Publication Badge */
+        .badge {
+            display: inline-block;
+            background: #e8f0fe; /* Very light blue background */
+            color: var(--accent);
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        footer { 
+            margin-top: 6rem; 
+            padding-top: 2rem; 
+            border-top: 1px solid var(--border); 
+            font-size: 0.85rem; 
+            color: var(--text-muted); 
+        }
     </style>
 </head>
 <body>
 
     <header class="intro">
         <h1>Ranjithragavan</h1>
-        <div class="subtitle">AI Engineer & Builder</div>
-        <p style="margin-top: 1.5rem; max-width: 600px;">
-            Bridging the gap between <strong>Enterprise Mainframe Systems</strong> and <strong>Agentic AI</strong>. 
-            Leveraging 6+ years of systems engineering experience to build robust, scalable AI agents using LangGraph and LLMs.
+        <div class="subtitle">AI Engineer & Enterprise Systems Builder</div>
+        <p style="max-width: 600px;">
+            Bridging the gap between <strong>Legacy Enterprise Systems</strong> and <strong>Agentic AI</strong>. 
+            <br>
+            I leverage 6+ years of rigorous systems engineering experience to build scalable, fault-tolerant AI agents using LangGraph and LLMs.
         </p>
+        
         <div class="meta-links">
             <a href="mailto:m.ranjithragavan@gmail.com">Email</a>
+            
             <a href="mailto:m.ranjithragavan@gmail.com?subject=Interview%20Chat%20Request&body=Hi%20Ranjith%2C%0D%0A%0D%0AI%20would%20like%20to%20discuss%20an%20opportunity.%0D%0A%0D%0AAre%20you%20available%20for%20a%20Google%20Meet%20or%20Teams%20chat%3F%0D%0A">Request Chat</a>
+            
             <a href="https://github.com/ranjithragavan1">GitHub</a>
             <a href="https://www.linkedin.com/in/ranjithragavan">LinkedIn</a>
         </div>
@@ -68,21 +161,19 @@
 
     <main>
         <section>
-            <h2>Experience</h2>
+            <h2>Professional Experience</h2>
             
             <article class="timeline-entry">
-                <time class="time-marker">2025 – Now</time>
+                <time class="time-marker">2023 – Present</time>
                 <div class="entry-content">
                     <span class="entry-title">Agentic AI Engineer</span>
-                    <p>Focusing on Model Context Protocol (MCP) and agentic workflows. Re-engineering enterprise logic using Large Language Models.</p>
-                </div>
-            </article>
-
-            <article class="timeline-entry">
-                <time class="time-marker">2023 – 2025</time>
-                <div class="entry-content">
-                    <span class="entry-title">Agentic AI Engineer</span>
-                    <p>Designed and implemented early agentic patterns. Re-engineering enterprise logic using Large Language Models and validating reasoning chains.</p>
+                    <p>
+                        Spearheading the integration of <strong>Generative AI</strong> into enterprise workflows. 
+                        Building autonomous agents using <strong>LangGraph</strong> and <strong>Google Vertex AI</strong> to automate complex reasoning tasks.
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        Key Focus: Model Context Protocol (MCP), RAG Optimization, and bridging Mainframe data with LLM reasoning.
+                    </p>
                 </div>
             </article>
 
@@ -90,25 +181,39 @@
                 <time class="time-marker">2019 – 2023</time>
                 <div class="entry-content">
                     <span class="entry-title">Software Engineer - Enterprise Systems</span>
-                    <p>Managed mission-critical transaction pipelines. Focused on high-availability system architecture, data integrity, and optimizing batch processing logic.</p>
+                    <p>
+                        Engineered mission-critical transaction pipelines handling high-volume data processing. 
+                        Optimized <strong>COBOL/JCL</strong> batch jobs to ensure 99.99% system availability and data consistency.
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        *This rigorous engineering discipline now informs my approach to building reliable AI systems.*
+                    </p>
                 </div>
             </article>
+        </section>
 
-            <article class="timeline-entry">
-                <time class="time-marker">Education</time>
-                <div class="entry-content">
-                    <span class="entry-title">B.Tech, Biotechnology</span>
-                </div>
-            </article>
+        <section>
+            <h2>Education & Research</h2>
 
             <article class="timeline-entry">
                 <time class="time-marker">Publication</time>
                 <div class="entry-content">
+                    <span class="badge">Artificial Intelligence</span>
                     <span class="entry-title">Neural Networks in Biotechnology</span>
-                    <p style="margin-bottom: 0.5rem;">
+                    <p style="font-style: italic;">
                         "Increasing productivity of Spirulina platensis in photobioreactors using artificial neural network modeling"
                     </p>
-                    <a href="https://doi.org/10.1002/bit.27128" target="_blank" class="publication-link">View Paper (DOI) &rarr;</a>
+                    <a href="https://doi.org/10.1002/bit.27128" target="_blank" style="font-size: 0.9rem;">View Paper (DOI) &rarr;</a>
+                </div>
+            </article>
+
+            <article class="timeline-entry">
+                <time class="time-marker">Degree</time>
+                <div class="entry-content">
+                    <span class="entry-title">B.Tech, Biotechnology</span>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        Focused on Computational Biology and Data Modeling.
+                    </p>
                 </div>
             </article>
         </section>
